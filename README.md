@@ -1,2 +1,4 @@
-# cs6102-iitb-spring-2024.github.io
-CS 6102: Implementation Security In Cryptography by Prof. Sayandeep Saha
+# CS 6102: Spring 2024
+
+Course Name: Implementation Security In Cryptography
+Course Instructor: Prof. Sayandeep Saha
