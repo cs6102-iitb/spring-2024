@@ -1,0 +1,33 @@
+[book]
+authors = ["Kalind Karia"]
+language = "en"
+multilingual = false
+src = "src"
+title = "CS6102 Spring 2024"
+
+[build]
+build-dir = "course_book"
+create-missing = false
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.html.print]
+enable = false
+
+[output.html.playground]
+#editable = true
+copyable = true
+#copy-js = true
+#line-numbers = true
+
+[output.html]
+#theme = "new_mdbook_theme"
+#default-theme = "rust"
+no-section-label = true
+mathjax-support = true
+#additional-css = ["style.css"]
+#additional-js = ["sidebar.js"]
+#input-404 = "404.html"
+
