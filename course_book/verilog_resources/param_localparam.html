@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Parameters - CS6102 Spring 2024</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CS6102 Spring 2024</h1>
+
+                    <div class="right-buttons">
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <center>
+    <h1 id="parameters"><a class="header" href="#parameters">Parameters</a></h1>
+</center>
+<hr />
+<h2 id="parameter"><a class="header" href="#parameter">Parameter</a></h2>
+<p>parameters in verilog is nothing but a way to instantiate constants in the digital design.</p>
+<p><code>parameter</code> is local to a module. but it can change value when the module is instantiated. It is used to define a property of the module.</p>
+<p><strong>Syntax</strong><br>
+<code>parameter &lt;parameter_name&gt; = &lt;constant_expression&gt;;</code></p>
+<p><strong>Example</strong><br></p>
+<ul>
+<li><code>parameter size = 4;</code></li>
+<li><code>parameter clk = freq / 2;</code></li>
+</ul>
+<p>This property can be left to default, or can be modified at instantiation of the module. For example</p>
+<center>
+    <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=module%2520adder%2520%28a%252C%2520b%252C%2520sum%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520parameter%2520width%2520%253D%25208%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520input%2520%255Bwidth-1%253A0%255D%2520a%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520input%2520%255Bwidth-1%253A0%255D%2520b%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520output%2520%255Bwidth-1%253A0%255D%2520sum%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520assign%2520sum%2520%253D%2520a%2520%252B%2520b%253B%250A%250Aendmodule"
+        style="width: 320px; height: 216px; border:0; transform: scale(1); overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+    </iframe>
+</center>
+<!-- ```c
+module adder (a, b, sum);
+        parameter width = 8;
+        input [width-1:0] a;
+        input [width-1:0] b;
+        output [width-1:0] sum;
+        assign sum = a + b;
+endmodule
+``` -->
+<p>By default, the adder is 8-bit (the width parameter use the default assigned value of 8). However, the instantiator module can change parameter value.</p>
+<center>
+    <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=module%2520top%253B%250A%2520%2520%2520%2520reg%2520%255B15%253A0%255D%2520a%253B%250A%2520%2520%2520%2520reg%2520%255B15%253A0%255D%2520b%253B%250A%2520%2520%2520%2520wire%2520%255B15%253A0%255D%2520sum1%253B%250A%2520%2520%2520%2520wire%2520%255B15%253A0%255D%2520sum2%253B%250A%250A%2520%2520%2520%2520adder%2520add1%2520%28a%252C%2520b%252C%2520sum1%29%253B%250A%2520%2520%2520%2520defparam%2520add1.width%2520%253D%252016%253B%250A%250A%2520%2520%2520%2520adder%2520%2523%2816%29%2520add2%2520%28a%252C%2520b%252C%2520sum2%29%253B%250A%250Aendmodule%250A"
+        style="width: 344px; height: 292px; border:0; transform: scale(1); overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+    </iframe>
+</center>
+<!-- ```c
+module top;
+    reg [15:0] a;
+    reg [15:0] b;
+    wire [15:0] sum1;
+    wire [15:0] sum2;
+    adder add1 (a, b, sum1);
+    defparam add1.width = 16;
+    adder #(16) add2 (a, b, sum2);
+endmodule
+``` -->
+<hr />
+<h2 id="local-parameter"><a class="header" href="#local-parameter">Local Parameter</a></h2>
+<p>local parameter <code>localparam</code> is also used to store the constant in the digital design but the constant defined inside the module cannot be changed. (i.e from where the module is instantiated).</p>
+<p><strong>Syntax</strong><br>
+<code>localparam name = value;</code></p>
+<p><strong>Example</strong><br></p>
+<ul>
+<li><code>localparam len = width/12;</code></li>
+<li><code>localparam size = 16;</code></li>
+</ul>
+<center>
+    <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=module%2520adder%2520%28a%252C%2520b%252C%2520sum%29%253B%250A%2520%2520%2520%2520parameter%2520height%2520%253D%25208%253B%250A%2520%2520%2520%2520parameter%2520width%2520%253D%252010%253B%250A%2520%2520%2520%2520localparam%2520length%2520%253D%25204%253B%250A%250A%2520%2520%2520%2520input%2520%255Bwidth-1%253A0%255D%2520a%253B%250A%2520%2520%2520%2520input%2520%255Bheight-1%253A0%255D%2520b%253B%250A%2520%2520%2520%2520input%2520%255Blength-1%253A0%255D%2520c%253B%250A%2520%2520%2520%2520output%2520%255Bwidth-1%253A0%255D%2520sum%253B%250A%250A%2520%2520%2520%2520assign%2520sum%2520%253D%2520a%2520%252B%2520b%2520%252B%2520c%253B%250Aendmodule%250A%250Amodule%2520top%253B%250A%2520%2520%2520%2520reg%2520%255B15%253A0%255D%2520a%253B%250A%2520%2520%2520%2520reg%2520%255B15%253A0%255D%2520b%253B%250A%2520%2520%2520%2520wire%2520%255B15%253A0%255D%2520sum1%253B%250A%250A%2520%2520%2520%2520%252F%252Ferror%2520as%2520length%2520is%2520not%2520accessible%2520outside%2520the%2520module%2520adder%250A%2520%2520%2520%2520adder%2520%2523%28.width%2816%29%252C%2520.height%284%29%252C%2520.length%285%29%2520add_0%2520%28a%252C%2520b%252C%2520sum2%29%29%253B%250A%250Aendmodule"
+        style="width: 621px; height: 492px; border:0; transform: scale(1); overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+    </iframe>
+</center>
+<!-- ```c
+module adder (a, b, sum);
+    parameter height = 8;
+    parameter width = 10;
+    localparam length = 4;
+
+    input [width-1:0] a;
+    input [height-1:0] b;
+    input [length-1:0] c;
+    output [width-1:0] sum;
+
+    assign sum = a + b + c;
+endmodule
+
+module top;
+    reg [15:0] a;
+    reg [15:0] b;
+    wire [15:0] sum1;
+
+    //error as length is not accessible outside the module adder
+    adder #(.width(16), .height(4), .length(5) add_0 (a, b, sum2));
+
+endmodule
+``` -->
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../verilog_resources/conditional_statement.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../verilog_resources/conditional_statement.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

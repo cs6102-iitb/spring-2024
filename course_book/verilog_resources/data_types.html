@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Data Types - CS6102 Spring 2024</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CS6102 Spring 2024</h1>
+
+                    <div class="right-buttons">
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <center>
+    <h1 id="verilog-data-types"><a class="header" href="#verilog-data-types">Verilog Data Types</a></h1>
+</center>
+<hr />
+<p>In Verilog, there are several data types that you can use to represent different kinds of values and signals. Here are some of the main data types available in Verilog:</p>
+<ol>
+<li>
+<p><strong>Wire (<code>wire</code>):</strong> Wires are used to represent continuous signals. They're commonly used for connecting different modules in a design and for carrying values between different parts of a circuit.</p>
+<pre><code class="language-c">wire a, b, result;
+</code></pre>
+</li>
+<li>
+<p><strong>Reg (<code>reg</code>):</strong> Despite the name, <code>reg</code> is used to store values that can be changed and used in sequential logic. It's often used to store state information in sequential circuits.</p>
+<pre><code class="language-c">// 1 bit register
+reg flag;
+// 4 bit register
+reg [3:0] counter;
+</code></pre>
+</li>
+<li>
+<p><strong>Integer (<code>integer</code>):</strong> Integers are used to store whole numbers. They are mainly used for tasks like counting, indexing, and loop control.</p>
+<pre><code class="language-c">integer count;
+</code></pre>
+</li>
+<li>
+<p><strong>Real (<code>real</code>):</strong> Real data type is used to store floating-point numbers, which include numbers with fractional parts.</p>
+<pre><code class="language-c">real temperature;
+</code></pre>
+</li>
+<li>
+<p><strong>Time (<code>time</code>):</strong> Time data type is used to store time values, often used for modeling delays and timing in simulations.</p>
+<pre><code class="language-c">time delay;
+</code></pre>
+</li>
+<li>
+<p><strong>Bit (<code>bit</code>):</strong> A single binary digit, either 0 or 1. It's the smallest data type representing a single bit of information.</p>
+<pre><code class="language-c">bit flag;
+</code></pre>
+</li>
+<li>
+<p><strong>Vector (<code>[N:0]</code> or <code>[N: M]</code>):</strong> Vectors are used to represent groups of bits. They can be used to represent multi-bit buses or signals. <code>N</code> and <code>M</code> are the range of indices for the vector.</p>
+<pre><code class="language-c">wire [7:0] data_bus;   // 8-bit data bus
+wire [2:0] control;    // 3-bit control signal
+// Splitting a 16-bit data into upper and lower parts
+wire [15:8] upper_data, [7:0] lower_data;
+</code></pre>
+</li>
+<li>
+<p><strong>Arrays (<code>[N]</code>):</strong> Arrays are used to store multiple values of the same data type. They can be used for tasks like storing memory contents.</p>
+<pre><code class="language-c">reg [7:0] memory [0:255]; // 1D Array
+reg [7:0] graph [0:31][0:31] // 2D Array
+</code></pre>
+</li>
+</ol>
+<!-- 9. **Structures (`struct`):** Similar to structures in programming languages, `struct` is used to define a collection of variables of different data types under a single name.
+    ```c
+    typedef struct {
+        reg [7:0] address;
+        reg [15:0] data;
+    } memory_element;
+
+    memory_element mem1, mem2;
+    ```
+
+10. **Enum (`enum`):** Enums are used to define named integer values, which can make your code more readable by giving meaningful names to constants.
+    ```c
+    typedef enum {IDLE, ACTIVE, DONE} state;
+    state current_state;
+    ``` -->
+<ol start="9">
+<li>
+<p><strong>Strings (<code>string</code>):</strong> Strings are used to represent sequences of characters. They are often used for reporting messages or displaying text in simulations.</p>
+<pre><code class="language-c">string message = "Hello, Verilog!";
+reg [8*11:1] str = "Hello World";
+</code></pre>
+</li>
+<li>
+<p><strong>Memory (<code>reg [N:0] mem [M];</code>):</strong> Used to model memory elements, where <code>N</code> is the bit-width of each element and <code>M</code> is the number of memory elements.</p>
+<pre><code class="language-c">reg [7:0] memory [255];  // 256-byte memory
+</code></pre>
+</li>
+</ol>
+<p>These data types allow you to represent a wide range of values and signals within your Verilog designs.</p>
+<h3 id="which-data-type-to-use"><a class="header" href="#which-data-type-to-use">Which data type to use?</a></h3>
+<p>All the data types mentioned can be used in both hardware implementation and writing testbenches in Verilog, but they serve different purposes in each context.</p>
+<p>In hardware implementation, you're describing the actual behavior of physical components, whereas in testbenches, you're creating simulation scenarios and conditions to verify your design's correctness and functionality.</p>
+<p><strong>Hardware Implementation</strong></p>
+<p>When you're implementing a digital circuit in hardware using Verilog, you'll be using data types like wires (<code>wire</code>), registers (<code>reg</code>), vectors, and memory (<code>reg [N:0] mem [M];</code>) extensively. These data types are used to model the behavior of actual hardware components, signals, and memory elements. You'll describe how these components interact, how they change states, and how they process data.</p>
+<p>For example, when designing a any digital circuit like logic gates, you'll use these data types to define the behavior of individual components and their connections, ultimately guiding how your design will function in the real world.</p>
+<p><strong>TestBenches</strong></p>
+<p>When you're writing testbenches for your Verilog designs, you'll often use data types like integers (<code>integer</code>), reals (<code>real</code>), and other types to model simulation-specific behaviors. These data types are useful for generating test vectors, specifying simulation conditions, and analyzing the behavior of your design in a simulated environment.</p>
+<p>For example, if you're testing a circuit, you might use integer data types to count cycles or iterations in your testbench. You might use real data types to simulate certain time-related behaviors. These data types don't necessarily represent physical hardware components but are essential for creating realistic scenarios in your simulations.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../verilog_resources/about.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../verilog_resources/building_blocks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../verilog_resources/about.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../verilog_resources/building_blocks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
