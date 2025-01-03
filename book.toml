@@ -6,7 +6,7 @@ src = "src"
 title = "CS6102 Spring 2024"
 
 [build]
-build-dir = "course_book"
+build-dir = "docs"
 create-missing = false
 
 [output.html.fold]
