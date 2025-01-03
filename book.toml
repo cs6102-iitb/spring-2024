@@ -24,7 +24,7 @@ copyable = true
 
 [output.html]
 #theme = "new_mdbook_theme"
-#default-theme = "rust"
+default-theme = "ayu"
 no-section-label = true
 mathjax-support = true
 #additional-css = ["style.css"]
