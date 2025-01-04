@@ -115,16 +115,16 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 
 <h2>Grading Policy (Tentative)</h2>
 
-- Programming Assignments   : 30 % (Best 2 among 3 will be considered)
-- Midsem/Endsem             : 50 % (Best of 2)
-- Paper Presentation        : 15 % (Video/Physical; Group/Individual)
-- Video scribes             : 5 % (2 mins "proper" summary of a lecture; Group/Individual)
+- Programming Assignments  : 20 % (Best 2 among 3 will be considered)
+- Quiz                     : 15% (Best of 2 will be considered)
+- Midsem,Endsem            : 50 % 
+- Paper Presentation       : 15 % (Physical; Group/Individual)
 
 **Bonus Marks**
 
 1. Best Presentation                    : +5
-2. Best Video scribe                    : +2
-3. "Optional" extra coding assignment   : +20 (max.)
+2. Best assignment                      : +5
+3. "Optional" extra coding assignment   : +5 (max.)
 4. Constructive and useful feedback     : +2
 
 ---------
