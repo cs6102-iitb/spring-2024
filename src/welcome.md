@@ -24,7 +24,8 @@ appointment via email
 
 
 TAs:
-To be announced soon...
+Kalind Karia (kalindkaria@cse.iitb.ac.in)
+More TAs may be assigned
 
 
 </td>
