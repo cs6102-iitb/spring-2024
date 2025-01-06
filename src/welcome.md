@@ -116,9 +116,9 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 
 <h2>Grading Policy (Tentative)</h2>
 
-- Programming Assignments  : 20 % (Best 2 among 3 will be considered)
+- Programming Assignments  : 30 % (Best 2 among 3 will be considered)
 - Quiz                     : 15% (Best of 2 will be considered)
-- Midsem,Endsem            : 50 % 
+- Midsem,Endsem            : 40 % 
 - Paper Presentation       : 15 % (Physical; Group/Individual)
 
 **Bonus Marks**
