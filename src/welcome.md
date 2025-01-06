@@ -15,19 +15,18 @@
 * Lecture Slot: 6
 * Lecture Venue: CC 105
 * Lecture Days: Wednesday and Friday \
-(11:05 to 12:30)
-* https://piazza.com/iit_bombay/spring2025/cs6102   access code:cs6102
-* Instructor office hours: After class or get an \
-appointment via email
+(11:05 am to 12:30 pm)
+* Piazza class: [link](https://piazza.com/iit_bombay/spring2025/cs6102) \
+Access code: `cs6102`
+* Instructor office hours: After class or get \
+an appointment via email
 
 </td>
 <td>
 
-
 TAs:
-Kalind Karia (kalindkaria@cse.iitb.ac.in)
-More TAs may be assigned
-
+- [Kalind Karia](https://kalindkaria.github.io/) (kalind.karia@iitb.ac.in)
+- [Giriraj Singh](https://rajsng3737.github.io/) (23m0815@iitb.ac.in)
 
 </td>
 </tr>
@@ -117,10 +116,10 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 
 <h2>Grading Policy (Tentative)</h2>
 
-- Programming Assignments  : 30 % (Best 2 among 3 will be considered)
-- Quiz                     : 15% (Best of 2 will be considered)
-- Midsem,Endsem            : 40 % 
-- Paper Presentation       : 15 % (Physical; Group/Individual)
+- Programming Assignments  : **30 %** (Best 2 among 3 will be considered)
+- Quiz                     : **15 %** (Best of 2 will be considered)
+- Midsem, Endsem           : **40 %**
+- Paper Presentation       : **15 %** (Physical; Group/Individual)
 
 **Bonus Marks**
 
