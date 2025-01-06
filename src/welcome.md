@@ -16,6 +16,7 @@
 * Lecture Venue: CC 105
 * Lecture Days: Wednesday and Friday \
 (11:05 to 12:30)
+* https://piazza.com/iit_bombay/spring2025/cs6102   access code:cs6102
 * Instructor office hours: After class or get an \
 appointment via email
 
