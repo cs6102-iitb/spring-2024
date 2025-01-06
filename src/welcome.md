@@ -146,7 +146,7 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
     - Different types of power attacks
     - Power attack countermeasures
 
-4. Week 10
+4. Week 10 onwards
     - Fault attacks
     - Fault attack countermeasures
     - Advanced topics
