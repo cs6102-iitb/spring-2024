@@ -4,6 +4,7 @@
 </center>
 
 ---------
+
 <h2>Course Details</h2>
 
 
@@ -42,76 +43,6 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 
 <br>
 
-
-<!--
-<table>
-
-<tr>
-<th> Theory: </th>
-<th> Practical: </th>
-</tr>
-
-<tr>
-<td>
-
-- Introduction: Embedded Systems
-- Applications (Digital Camera)
-- General Structure of Cyber Systems
-- Model Based Design
-    - Introduction to FSM
-    - State Charts
-    - Lustre/Heptagon
-- LUSTRE/Heptagon
-    - Synchronous Dataflow Programming
-    - Higher Order Functions
-    - Uni-Mode Controllers
-    - Multi-Mode Controllers
-    - Finite State Automaton
-    - Concurrent Automata
-- Embedded System Device Drivers
-    - Input/Output device Interfacing and Masking
-    - Motor Interfacing and PWM
-    - ADC Interfacing
-    - White Line Following using PID Controller
-- Real Time Operating System
-    - Introduction
-    - Scheduling Theory
-
-
-</td>
-<td>
-
-<b> Labs </b>
-- Software
-    - Lustre/Heptagon
-- Model Based Design
-    - Finite State Machine
-    - Statechart
-    - Lustre/Heptagon
-- Basic Peripherals:
-    - Introduction to AVR Controller
-    - GPIO, Motor Interfacing, PWM and ADC
-- Adaptive Cruise Control - case study
-    - using Embedded C programming
-    - using Lustre/Heptagon
-    - using Statechart
-- RTOS
-    <!-- - Basics of Real-time operating systems
-    - Practical example showing the effectiveness of RTOS -->
-<!--
-<b> IoT Workshop </b>
-- Introduction to IoT
-- HTTP, MQTT, CoAP
-- Google App Scripts -->
-
-<!--
-</td>
-</tr>
-</table>
-
-
-<br>
--->
 ---------
 
 <h2>Grading Policy (Tentative)</h2>
@@ -152,7 +83,18 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
     - Advanced topics
     - Paper presentations
 
+---
+<br>
+
+|   Date    | Lecture Topic | Pre-req |  Lecture Slides  |  Reading Material  |
+| :-------------: | :--------------------------------------------: | :-------------: | :-------------: | :-------------: |
+|   Jan 08  |   Course Prelude, Introduction |  -  |  [pdf](./downloadables/lec_slides/ISC_lec1.pdf)  |  -  |
+|   Jan 10  |   Intro to Theoretical Cryptography |  -  | [pdf](./downloadables/lec_slides/ISC_lec2.pdf)  |  Intro to Modern Cryptography, Chapters 2 to 3.4 <br>[pdf](./downloadables/ref_books/intro_to_modern_crypto-chap_2-3.4.pdf)  |
+|   Jan 15  |   - |  Bayes theorem, Basic probability, Boolean algebra  |  -  |  -  |
+|   Jan 17  |   - |  Digital logic design (brush up the concepts), Verilog (see the resources on webpage and also <br>[asic-world.com](https://asic-world.com/verilog/index.html))  | -  |  -  |
+
 <!--
+
 |   Date    | Lecture Topic | Quiz |  Lecture Slides  |
 | :-------------: | :--------------------------------------------: | :-------------: | :-------------: |
 |   Jan 05  |   Course Prelude, Introduction |  -  |  [Intro](./resources/Slides/2024_01_05_ES01_intro.pdf)  |
@@ -184,24 +126,15 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 <br>
 
 ---------
-<!--
-<h2>Lab Schedule:[Tentative]</h2>
+<!-- <!-- -->
 
-|   Sr. No    | Lab | Release Date |  End Date  |
+<!-- <h2>Assignment Schedule:[Tentative]</h2>
+
+|   Sr. No    | Assignment | Release Date |  End Date  |
 | :-------------: | :---------------------------: | :---------------------------: |  :---------------------------: |
-|   0    |   Installation of Software  |  Thursday, January 05, 2023 | Thursday, January 12, 2023 |                              |
-|   1    |   Draw FSM for the Line Following Robot [Individual]        |  Monday, January 16, 2023 |  Monday, January 23, 2023 |
-|   2    |   Draw Statechart for the Problem Statement defined in project [Group]             |   Monday, January 23, 2023 |  Sunday, February 05, 2023  |
-|   3    |   Lustre/Heptagon implementation of Problem Statement [Group]     |  Thursday, February 09, 2023 |   Thursday, March 2, 2023  |
-|   4    |   Device Drivers for IO, Motor and PWM [Group]       |    Thursday, March 2, 2023 |  Thursday, March 09, 2023 |
-|   5    |   Line Follower Robot/ Color or ACC[Group]          |   Thursday, March 09, 2023  |  Thursday, March 16, 2023 |
-|   6    |   Implementation of Statechart/Heptagon on Robot [Group]           |  Thursday, March 16, 2023 |  Thursday, March 27, 2023  |
+|   1    |   Part1: S-box implementation        | Thursday, January 12, 2023 |  Thursday January 19, 2023  |
+|   1    |   Part2: Present block cipher design        |  Thursday, February 02, 2023 | Thursday, February 09, 2023 |
+|   2    |   Side-channel attack     |  Thursday, February 09, 2023 |  Thursday, February 16, 2023 |
+|   3    |   Fault attack       |  Thursday, March 16, 2023 |  Thursday, March 30, 2023  | -->
 
-<h2>Assignment Schedule:[Tentative]</h2>
-
-|   Sr. No    | Lab | Release Date |  End Date  |
-| :-------------: | :---------------------------: | :---------------------------: |  :---------------------------: |
-|   1    |   Handwritten Kernel in C [Individual]        | Thursday, January 12, 2023 |  Thursday January 19, 2023  |
-|   2    |   Lustre/Heptagon [Individual]             |  Thursday, February 02, 2023 | Thursday, February 09, 2023 |
-|   3    |   Lustre/Heptagon [Individual]     |  Thursday, February 09, 2023 |  Thursday, February 16, 2023 |
-|   4    |   FreeRTOS/scheduling theory [Individual]       |  Thursday, March 16, 2023 |  Thursday, March 30, 2023  |        -->
+<!-- -->

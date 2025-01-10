@@ -3,7 +3,7 @@ authors = ["Kalind Karia"]
 language = "en"
 multilingual = false
 src = "src"
-title = "CS6102 Spring 2024"
+title = "CS6102 Spring 2024-25"
 
 [build]
 build-dir = "docs"

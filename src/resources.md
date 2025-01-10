@@ -14,3 +14,6 @@ Below are the curated set of resources that will help you learn Verilog language
   - [Conditional Statements](./verilog_resources/conditional_statement.md)
 
 - [Digital Circuits]() (will be added soon)
+
+<!-- - [Digital Circuits](./digital_circuits/about.md)
+  - [ALU](./digital_circuits/alu.md) -->
