@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Conditional Statements - CS6102 Spring 2024-25</title>
+        <title>Changelog - CS6102 Spring 2024-25</title>
 
 
         <!-- Custom HTML head -->
@@ -12,20 +12,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -34,11 +34,11 @@
 
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "../";
+            var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="toc.js"></script>
     </head>
     <body>
     <div id="body-container">
@@ -90,7 +90,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -151,60 +151,40 @@
                 <div id="content" class="content">
                     <main>
                         <center>
-    <h1 id="verilog-conditional-statements"><a class="header" href="#verilog-conditional-statements">Verilog Conditional Statements</a></h1>
+    <h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
 </center>
 <hr />
-<p>The conditional statements are used to determine whether particular statement should be executed or not. Control statements in Verilog is similar to control statements in C.</p>
-<h3 id="if-else"><a class="header" href="#if-else">if-else</a></h3>
-<p>If the expression in if condition is true then the statements inside the if condition will be executed or if it is false the statements inside the else condition will be executed.</p>
-<p>Syntax:</p>
-<pre><code class="language-C">if (expression)
-    [statement]
-else
-    [statement]
-</code></pre>
-<p><code>if-else</code> for multiple statements should be</p>
-<pre><code class="language-C">if (expression) begin
-    [multiple statements]
-end
-
-else begin
-  [multiple statements]
-end
-</code></pre>
-<p>Example:</p>
-<center>
-    <iframe
-        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=always%2520%2540%28posedge%2520clock%29%2520begin%250A%2520%2520%2520if%2520%28reset%29%2520state%2520%253C%253D%2520IDLE%253B%250A%2520%2520%2520else%2520state%2520%253C%253D%2520next_state%253B%250Aend%250A"
-        style="width: 305px; height: 140px; border:0; transform: scale(1); overflow:hidden;"
-        sandbox="allow-scripts allow-same-origin">
-    </iframe>
-</center>
-<!-- ```c
-   always @(posedge clock) begin
-       if (reset) state <= IDLE;
-       else state <= next_state;
-   end
-``` -->
-<p>Similar to C, it is possible to have nested if statements in Verilog.</p>
-<h3 id="conditional-operator"><a class="header" href="#conditional-operator">Conditional Operator</a></h3>
-<p>You can assign a value based on a condition by using the conditional operator.</p>
-<p>Syntax:</p>
-<pre><code class="language-c">variable = &lt;condition&gt; ? &lt;expression1&gt; : &lt;expression2&gt;
-</code></pre>
-<p>If the condition is true expression1 is assigned to the variable or else expression2 is assigned to the variable.</p>
+<blockquote>
+<p>All Notable changes to the theme will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">keep a ChangeLog</a>, and this document adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+</blockquote>
+<hr />
+<h2 id="003---2025-01-16"><a class="header" href="#003---2025-01-16">0.0.3 - 2025-01-16</a></h2>
+<h3 id="updated"><a class="header" href="#updated">Updated</a></h3>
+<ul>
+<li>Welcome: Slides for lecture 3.</li>
+</ul>
+<h2 id="002---2025-01-10"><a class="header" href="#002---2025-01-10">0.0.2 - 2025-01-10</a></h2>
+<h3 id="updated-1"><a class="header" href="#updated-1">Updated</a></h3>
+<ul>
+<li>Welcome: Slides for lectures 1, 2. Added pre-requisites for lectures 3, 4.</li>
+</ul>
+<h2 id="001---2025-01-06"><a class="header" href="#001---2025-01-06">0.0.1 - 2025-01-06</a></h2>
+<h3 id="added"><a class="header" href="#added">Added</a></h3>
+<ul>
+<li>Welcome to <strong>CS 6102</strong> welcome page</li>
+<li>Learn: Resources for Verilog</li>
+</ul>
+<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../verilog_resources/param_localparam.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="verilog_resources/conditional_statement.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../changelog.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -212,13 +192,10 @@ end
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../verilog_resources/param_localparam.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="verilog_resources/conditional_statement.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../changelog.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
@@ -247,13 +224,13 @@ end
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 

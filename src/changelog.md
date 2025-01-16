@@ -1,0 +1,33 @@
+
+<center>
+    <h1>Changelog</h1>
+</center>
+
+---
+
+> All Notable changes to the theme will be documented in this file.
+>
+> The format is based on [keep a ChangeLog](https://keepachangelog.com/en/1.1.0/), and this document adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## 0.0.3 - 2025-01-16
+
+### Updated
+
+- Welcome: Slides for lecture 3.
+
+## 0.0.2 - 2025-01-10
+
+### Updated
+
+- Welcome: Slides for lectures 1, 2. Added pre-requisites for lectures 3, 4.
+
+## 0.0.1 - 2025-01-06
+
+### Added
+
+- Welcome to **CS 6102** welcome page
+- Learn: Resources for Verilog
+
+---
