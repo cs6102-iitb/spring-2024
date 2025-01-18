@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Building Blocks - CS6102 Spring 2024-25</title>
+        <title>Assignments - CS6102 Spring 2024-25</title>
 
 
         <!-- Custom HTML head -->
@@ -151,114 +151,93 @@
                 <div id="content" class="content">
                     <main>
                         <center>
-    <h1 id="building-blocks"><a class="header" href="#building-blocks">Building Blocks</a></h1>
+    <h1 id="assignments"><a class="header" href="#assignments">Assignments</a></h1>
 </center>
 <hr />
-<h3 id="verilog-module"><a class="header" href="#verilog-module">Verilog Module</a></h3>
-<p>A Verilog module is a self-contained unit that defines a specific functionality. It serves as a blueprint for creating instances of that functionality in your design. Modules encapsulate a set of logic, inputs, outputs, and potentially internal signals.
-<center>
-<iframe
-            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=module%2520Adder%2520%28%250A%2520%2520%2520%2520input%2520%255B3%253A0%255D%2520A%252C%250A%2520%2520%2520%2520input%2520%255B3%253A0%255D%2520B%252C%250A%2520%2520%2520%2520output%2520%255B4%253A0%255D%2520Sum%250A%29%253B%250A%250A%252F%252F%2520Logic%2520to%2520implement%2520addition%250A%250Aendmodule%250A"
-            style="width: 320px; height: 233px; border:0; transform: scale(1); overflow:hidden;"
-            sandbox="allow-scripts allow-same-origin">
-</iframe>
-</center></p>
-   <!-- ```c
-   module Adder (
-       input [3:0] A,
-       input [3:0] B,
-       output [4:0] Sum
-   );
-       // Logic to implement addition
-   endmodule
-   ``` -->
-<h3 id="verilog-port"><a class="header" href="#verilog-port">Verilog Port</a></h3>
-<p>Ports are the communication interfaces of a Verilog module. They define how information flows in and out of the module. Ports can be inputs, outputs, or bidirectional.</p>
-   <center>
-        <iframe
-            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=module%2520Decoder%2520%28%250A%2520%2520%2520%2520input%2520%255B2%253A0%255D%2520Input%252C%250A%2520%2520%2520%2520output%2520reg%2520%255B7%253A0%255D%2520Output%250A%29%253B%250A%250A%252F%252F%2520Logic%2520to%2520decode%2520the%2520input%2520signals%250A%250Aendmodule%250A"
-            style="width: 360px; height: 213px; border:0; transform: scale(1); overflow:hidden;"
-            sandbox="allow-scripts allow-same-origin">
-        </iframe>
-    </center>
-   <!-- ```c
-   module Decoder (
-       input [2:0] Input,
-       output reg [7:0] Output
-   );
-       // Logic to decode the input signals
-   endmodule
-   ``` -->
-<h3 id="verilog-module-instantiations"><a class="header" href="#verilog-module-instantiations">Verilog Module Instantiations</a></h3>
-<p>Module instantiations are instances of a module created within another module. They allow you to use the functionality defined in one module within another.</p>
-   <center>
-        <iframe
-            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=module%2520TopModule%253B%250A%2520%2520%2520%2520Adder%2520A1%2520%28.A%28inA%29%252C%2520.B%28inB%29%252C%2520.Sum%28sum%29%29%253B%250A%2520%2520%2520%2520Decoder%2520D1%2520%28.Input%28selector%29%252C%2520.Output%28decodedOutput%29%29%253B%250Aendmodule%250A"
-            style="width: 770px; height: 140px; border:0; transform: scale(1); overflow:hidden;"
-            sandbox="allow-scripts allow-same-origin">
-        </iframe>
-    </center>
-   <!-- ```c
-   module TopModule;
-       Adder A1 (.A(inA), .B(inB), .Sum(sum));
-       Decoder D1 (.Input(selector), .Output(decodedOutput));
-   endmodule
-   ``` -->
-<h3 id="verilog-assign-statements"><a class="header" href="#verilog-assign-statements">Verilog Assign Statements</a></h3>
-<p>The <code>assign</code> statement connects a source to a destination, creating a continuous assignment. It's used to connect wires or signals directly without using a procedural block.</p>
-   <center>
-        <iframe
-            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=assign%2520Sum%2520%253D%2520A%2520%252B%2520B%253B%250A"
-            style="width: 216px; height: 83px; border:0; transform: scale(1); overflow:hidden;"
-            sandbox="allow-scripts allow-same-origin">
-        </iframe>
-    </center>
-   <!-- ```c
-   assign Sum = A + B;
-   ``` -->
-<h3 id="verilog-always-block"><a class="header" href="#verilog-always-block">Verilog Always Block</a></h3>
-<p>The <code>always</code> block defines procedural logic that executes whenever the conditions specified within it are met. It's often used for sequential logic and state machines.</p>
-   <center>
-        <iframe
-            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=always%2520%2540%28posedge%2520clock%29%2520begin%250A%2520%2520%2520%2520if%2520%28reset%29%2520state%2520%253C%253D%2520IDLE%253B%250A%2520%2520%2520%2520else%2520state%2520%253C%253D%2520next_state%253B%250Aend%250A"
-            style="width: 310px; height: 139px; border:0; transform: scale(1); overflow:hidden;"
-            sandbox="allow-scripts allow-same-origin">
-        </iframe>
-    </center>
-   <!-- ```c
-   always @(posedge clock) begin
-       if (reset) state <= IDLE;
-       else state <= next_state;
-   end
-   ``` -->
-<p>In the above always block the logic statements will be executed at each positive edge of the clock signal.</p>
-<h3 id="verilog-initial-block"><a class="header" href="#verilog-initial-block">Verilog Initial Block</a></h3>
-<p>The <code>initial</code> block contains procedural code that's executed only once at the start of simulation. It's used for setting initial values or performing setup tasks.</p>
-   <center>
-        <iframe
-            src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=verilog&width=680&ds=true&dsyoff=0px&dsblur=0px&wc=false&wa=true&pv=9px&ph=9px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=initial%2520begin%250A%2520%2520%2520%2520clk%2520%253D%25200%253B%250A%2520%2520%2520%2520reset%2520%253D%25201%253B%250A%2520%2520%2520%2520%252F%252F%2520Other%2520initialization%2520tasks%250Aend%250A"
-            style="width: 334px; height: 158px; border:0; transform: scale(1); overflow:hidden;"
-            sandbox="allow-scripts allow-same-origin">
-        </iframe>
-    </center>
-   <!-- ```c
-   initial begin
-       clk = 0;
-       reset = 1;
-       // Other initialization tasks
-   end
-   ``` -->
-<p>These building blocks collectively allow you to create complex digital designs by defining the structure, behavior, and interactions of different components in your Verilog code.</p>
+<script>
+function startCountdown (targetDate, elementId) {
+    // Set the date we're counting down to
+    let countDownDate = new Date(targetDate).getTime();
 
+    // Update the count down every minute
+    let x = setInterval(() => {
+
+        // Get today's date and time
+        let now = new Date().getTime();
+
+        // Find the difference between now and the count down date
+        let difference = countDownDate - now;
+
+        // If the count down is over, write some text
+        if (difference < 0) {
+            clearInterval(x);
+            document.getElementById(elementId).innerHTML = "-";
+        } else {
+            // Time calculations for days, hours, and minutes
+            let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((difference % (1000 * 60)) / (1000));
+
+            // Output the result in the specified element
+            document.getElementById(elementId).innerHTML = days + "d " + hours + "h " + minutes + "m";
+            // document.getElementById(elementId).innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        }
+
+    }, 1000);
+}
+
+startCountdown('25 Jan, 2025 23:59:59', 'timer_part1a');
+startCountdown('01 Feb, 2025 23:59:59', 'timer_part1b');
+
+</script>
+<br>
+<table style="width:100%">
+<tr style="background-color: let(--quote-bg);">
+    <th align="center">#</th>
+    <th align="center">Start Date</th>
+    <th align="center">End Date</th>
+    <th align="center">Duration</th>
+    <th align="center">Time Remaining</th>
+</tr>
+<tr>
+    <td align="center"> <p><a href="../assignments/assignment1.html#part-a-deadline-jan-25-2025-1159-pm">1 (Part A)</a></p> </td>
+    <td align="center"> <p>18 Jan 2025</p> </td>
+    <td align="center"> <p>25 Jan 2025</p> </td>
+    <td align="center"> <p>6 Days</p> </td>
+    <td align="center"> <p id="timer_part1a"></p> </td>
+</tr>
+<tr>
+    <td align="center"> <p><a href="../assignments/assignment1.html#part-b-deadline-feb-01-2025-1159-pm">1 (Part B)</a></p> </td>
+    <td align="center"> <p>18 Jan 2025</p> </td>
+    <td align="center"> <p>01 Feb 2025</p> </td>
+    <td align="center"> <p>13 Days</p> </td>
+    <td align="center"> <p id="timer_part1b"></p> </td>
+</tr>
+<tr>
+    <td align="center"> <p><a>2</a></p> </td>
+    <td align="center"> <p>-</p> </td>
+    <td align="center"> <p>-</p> </td>
+    <td align="center"> <p>-</p> </td>
+    <td align="center"> <p>-</p> </td>
+</tr>
+<tr>
+    <td align="center"> <p><a>3</a></p> </td>
+    <td align="center"> <p>-</p> </td>
+    <td align="center"> <p>-</p> </td>
+    <td align="center"> <p>-</p> </td>
+    <td align="center"> <p>-</p> </td>
+</tr>
+</table>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../verilog_resources/data_types.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../installation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../verilog_resources/blocking_nonblocking.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../assignments/assignment1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -268,11 +247,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../verilog_resources/data_types.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../installation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../verilog_resources/blocking_nonblocking.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../assignments/assignment1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
