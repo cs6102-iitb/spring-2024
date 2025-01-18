@@ -90,8 +90,8 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 | :-------------: | :--------------------------------------------: | :-------------: | :-------------: | :-------------: |
 |   Jan 08  |   Course Prelude, Introduction |  -  |  [pdf](./downloadables/lec_slides/ISC_lec1.pdf)  |  -  |
 |   Jan 10  |   Intro to Theoretical Cryptography |  -  | [pdf](./downloadables/lec_slides/ISC_lec2.pdf)  |  Intro to Modern Cryptography, Chapters 2 to 3.4 <br>[pdf](./downloadables/ref_books/intro_to_modern_crypto-chap_2-3.4.pdf)  |
-|   Jan 15  |   - |  Bayes theorem, Basic probability, Boolean algebra  |  -  |  -  |
-|   Jan 17  |   - |  Digital logic design (brush up the concepts), Verilog (see the resources on webpage and also <br>[asic-world.com](https://asic-world.com/verilog/index.html))  | -  |  -  |
+|   Jan 15  |   Introduction to Block Ciphers |  Bayes theorem, Basic probability, Boolean algebra  |  [pdf](./downloadables/lec_slides/ISC_lec3.pdf)  |  -  |
+|   Jan 17  |   Hardware Design using Verilog |  Digital logic design, Verilog (see the resources on webpage and also [asic-world.com](https://asic-world.com/verilog/index.html))  | [pdf](./downloadables/lec_slides/ISC_lec4.pdf)  |  Prof. Debdeep Mukhopadhyay's lecture on Algorithm to Hardware <br>[video](https://www.youtube.com/watch?v=sACVot8QFWY&list=PLQBbcgo55TX-7vygatpMHOOtgflvYtkeZ&index=3)  |
 
 <!--
 

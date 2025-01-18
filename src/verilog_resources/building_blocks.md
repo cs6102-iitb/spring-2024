@@ -1,5 +1,5 @@
 <center>
-    <h1>Verilog Building Blocks</h1>
+    <h1>Building Blocks</h1>
 </center>
 
 ---

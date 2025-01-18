@@ -1,5 +1,5 @@
 <center>
-    <h1>Verilog Data Types</h1>
+    <h1>Data Types</h1>
 </center>
 
 ---

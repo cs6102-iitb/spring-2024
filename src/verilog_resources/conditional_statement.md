@@ -1,5 +1,5 @@
 <center>
-    <h1>Verilog Conditional Statements</h1>
+    <h1>Conditional Statements</h1>
 </center>
 
 ---

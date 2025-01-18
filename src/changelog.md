@@ -11,6 +11,17 @@
 
 ---
 
+## 0.0.4 - 2025-01-18
+
+### Added
+
+- Installation: Instructions for installing Iverilog and GTKwave software.
+- Assignments: Assignment 1 (Parts Aand B) launched.
+
+### Updated
+
+- Welcome: Slides for lecture 4 and reading material.
+
 ## 0.0.3 - 2025-01-16
 
 ### Updated
