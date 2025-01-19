@@ -11,12 +11,18 @@
 
 ---
 
+## 0.0.5 - 2025-01-19
+
+### Added
+
+- Resources: Verilog designs of some digital circuits are added.
+
 ## 0.0.4 - 2025-01-18
 
 ### Added
 
 - Installation: Instructions for installing Iverilog and GTKwave software.
-- Assignments: Assignment 1 (Parts Aand B) launched.
+- Assignments: Assignment 1 (Parts A and B) launched.
 
 ### Updated
 

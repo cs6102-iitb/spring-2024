@@ -15,3 +15,5 @@ Over time, Verilog got more sophisticated. It started with modeling basic gates 
 So, Verilog is not just about making computers understand us – it's about unleashing our creativity to build smarter, faster, and more efficient digital systems. As technology evolves, Verilog continues to be at the forefront of shaping the digital world we live in today. And guess what? You're about to dive into this world and experience the power of Verilog firsthand in this competition!</div>
 
 > *__Guide:__ Read more about Verilog on the <a href="https://asic-world.com/verilog/index.html" target="__blank">asic-world.com</a>.*
+
+---

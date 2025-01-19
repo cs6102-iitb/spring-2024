@@ -21,9 +21,12 @@
         - [Conditional Statements](./verilog_resources/conditional_statement.md)
         - [Parameters](./verilog_resources/param_localparam.md)
 
-    <!-- - [Digital Circuits](./digital_circuits/about.md)
+    - [Digital Circuits](./digital_circuits/about.md)
         - [Ripple Carry Adder](./digital_circuits/ripple_carry_adder.md)
-        - [ALU](./digital_circuits/alu.md) -->
+        - [Up Down Counter](./digital_circuits/up_down_counter.md)
+        - [ALU](./digital_circuits/alu.md)
+        - [Karatsuba Multiplier](./digital_circuits/karatsuba_multiplier.md)
+        - [FIFO](./digital_circuits/fifo.md)
 
 ---
 
