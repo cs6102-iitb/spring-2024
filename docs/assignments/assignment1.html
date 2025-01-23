@@ -199,6 +199,9 @@ gtkwave sbox_dump.vcd
   <img src="https://raw.githubusercontent.com/kalindkaria/mdbook-assets/master/cs6102_spring2024-25/assignment1/parta_sbox_sim_output.png">
 </div>
 <br>
+<blockquote>
+<p><strong>NOTE:</strong> The format of values (for ex., binary) on the signals displayed in your GTKwave output may not be similar to the one shown in the output above. Need not worry about it, just make sure that the values are correct as per the specifications of the design.</p>
+</blockquote>
 <hr />
 <h2 id="part-b-deadline-feb-01-2025-1159-pm"><a class="header" href="#part-b-deadline-feb-01-2025-1159-pm">Part B (Deadline: Feb 01, 2025 11:59 PM)</a></h2>
 <p>In this part, you will implement the datapath design of the PRESENT cipher. The datapath will be constructed from <code>keyschedule</code>, <code>permutation</code> and <code>sbox</code> modules as we can see from the block diagram above.</p>
@@ -247,6 +250,9 @@ gtkwave present_dump.vcd
 <br>
 <blockquote>
 <p><strong>NOTE:</strong> In the provided testbench, the <code>plaintext = 64'hffffffffffffffff</code> and <code>key = 80'h10000000000000000000</code>. Hence the corresponding output for <code>ciphertext = 64'had7d5befea5c6dea</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> The format of values (for ex., hexadecimal) on the signals displayed in your GTKwave output may not be similar to the one shown in the output above. You can change it to hexadecimal by doing a right-click on a signal and update its radix to <code>Hexadecimal</code>.</p>
 </blockquote>
 <p>We are providing a C implementation of the PRESENT cipher design in <code>present_cipher.c</code> file. Compile the file and provide the plaintext and key input in the hexadecimal format to see the corresponding ciphertext output.</p>
 <div align="center">

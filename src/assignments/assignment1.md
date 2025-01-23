@@ -71,6 +71,8 @@ The expected timing diagram is shown below.
 </div>
 <br>
 
+> **NOTE:** The format of values (for ex., binary) on the signals displayed in your GTKwave output may not be similar to the one shown in the output above. Need not worry about it, just make sure that the values are correct as per the specifications of the design.
+
 ---
 
 ## Part B (Deadline: Feb 01, 2025 11:59 PM)
@@ -132,6 +134,8 @@ You shall see the below timing diagram in GTKwave.
 <br>
 
 > **NOTE:** In the provided testbench, the `plaintext = 64'hffffffffffffffff` and `key = 80'h10000000000000000000`. Hence the corresponding output for `ciphertext = 64'had7d5befea5c6dea`.
+
+> **NOTE:** The format of values (for ex., hexadecimal) on the signals displayed in your GTKwave output may not be similar to the one shown in the output above. You can change it to hexadecimal by doing a right-click on a signal and update its radix to `Hexadecimal`.
 
 We are providing a C implementation of the PRESENT cipher design in `present_cipher.c` file. Compile the file and provide the plaintext and key input in the hexadecimal format to see the corresponding ciphertext output.
 
