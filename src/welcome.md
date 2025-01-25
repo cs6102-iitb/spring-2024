@@ -93,7 +93,7 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 |   Jan 15  |  Introduction to Block Ciphers |  Bayes theorem, Basic probability, Boolean algebra  |  [pdf](./downloadables/lec_slides/ISC_lec3.pdf)  |  -  |
 |   Jan 17  |  Hardware Design using Verilog |  Digital logic design, Verilog (see the resources on webpage and also [asic-world.com](https://asic-world.com/verilog/index.html))  | [pdf](./downloadables/lec_slides/ISC_lec4.pdf)  |  Prof. Debdeep Mukhopadhyay's lecture on Algorithm to Hardware <br>[video](https://www.youtube.com/watch?v=sACVot8QFWY&list=PLQBbcgo55TX-7vygatpMHOOtgflvYtkeZ&index=3)  |
 |   Jan 22  |  Some Essential Concepts in Hardware Design  |  -  |  [pdf](./downloadables/lec_slides/ISC_lec5.pdf)  |  -  |
-|   Jan 24  |  Finite Field and Hardware |  [pdf](./downloadables/lec_slides/ISC_lec6_prereq.pdf)  |  - |  -  |
+|   Jan 24  |  Finite Field and Hardware |  [pdf](./downloadables/lec_slides/ISC_lec6_prereq.pdf)  |  [pdf](./downloadables/lec_slides/ISC_lec6.pdf) | hard copy (due to some copyright issues) of a book will be provided in next class   |
 
 <!--
 

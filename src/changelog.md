@@ -11,6 +11,12 @@
 
 ---
 
+## 0.0.7 - 2025-01-25
+
+### Added
+
+- Welcome: Slides for lecture 6.
+
 ## 0.0.6 - 2025-01-23
 
 ### Added
