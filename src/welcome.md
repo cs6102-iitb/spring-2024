@@ -95,6 +95,7 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 |   Jan 22  |  Some Essential Concepts in Hardware Design  |  -  |  [pdf](./downloadables/lec_slides/ISC_lec5.pdf)  |  -  |
 |   Jan 24  |  Finite Field and Hardware |  [pdf](./downloadables/lec_slides/ISC_lec6_prereq.pdf)  |  [pdf](./downloadables/lec_slides/ISC_lec6.pdf) | hard copy (due to some copyright issues) of a book will be provided in next class   |
 |   Jan 29  |  The Anatomy of AES |  -  |  [pdf](./downloadables/lec_slides/ISC_lec7.pdf) |  -  |
+|   Jan 31  |  Field Isomorphism  |  -  |  [pdf](./downloadables/lec_slides/ISC_lec8.pdf) |  -  |
 
 <!--
 
