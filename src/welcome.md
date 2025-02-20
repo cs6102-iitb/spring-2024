@@ -97,6 +97,7 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 |   Jan 29  |  The Anatomy of AES |  -  |  [pdf](./downloadables/lec_slides/ISC_lec7.pdf) |  -  |
 |   Jan 31  |  Field Isomorphism  |  -  |  [pdf](./downloadables/lec_slides/ISC_lec8.pdf) |  -  |
 |   Feb 5, 7  |  Composite Field Mapping  |  -  |  [pdf](./downloadables/lec_slides/ISC_lec9_10.pdf) |  -  |
+| Feb 12, 19 | Entering the world of attacks | - | [pdf](./downloadables/lec_slides/ISC_lec11_12.pdf) | - |
 
 <!--
 
