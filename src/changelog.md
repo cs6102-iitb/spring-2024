@@ -11,6 +11,12 @@
 
 ---
 
+## 0.0.12 - 2025-02-26
+
+### Updated
+
+- Welcome: Slides for lectures 11 to 13.
+
 ## 0.0.11 - 2025-02-20
 
 ### Added
