@@ -38,8 +38,9 @@ function startCountdown (targetDate, elementId) {
     }, 1000);
 }
 
-startCountdown('25 Jan, 2025 23:59:59', 'timer_part1a');
-startCountdown('01 Feb, 2025 23:59:59', 'timer_part1b');
+startCountdown('25 Jan, 2025 23:59:59', 'timer_a1_part1a');
+startCountdown('01 Feb, 2025 23:59:59', 'timer_a1_part1b');
+startCountdown('13 Mar, 2025 23:59:59', 'timer_a2');
 
 </script>
 
@@ -60,7 +61,7 @@ startCountdown('01 Feb, 2025 23:59:59', 'timer_part1b');
     <td align="center"> <p>18 Jan 2025</p> </td>
     <td align="center"> <p>25 Jan 2025</p> </td>
     <td align="center"> <p>6 Days</p> </td>
-    <td align="center"> <p id="timer_part1a"></p> </td>
+    <td align="center"> <p id="timer_a1_part1a"></p> </td>
 </tr>
 
 <tr>
@@ -68,15 +69,15 @@ startCountdown('01 Feb, 2025 23:59:59', 'timer_part1b');
     <td align="center"> <p>18 Jan 2025</p> </td>
     <td align="center"> <p>01 Feb 2025</p> </td>
     <td align="center"> <p>13 Days</p> </td>
-    <td align="center"> <p id="timer_part1b"></p> </td>
+    <td align="center"> <p id="timer_a1_part1b"></p> </td>
 </tr>
 
 <tr>
-    <td align="center"> <p><a>2</a></p> </td>
-    <td align="center"> <p>-</p> </td>
-    <td align="center"> <p>-</p> </td>
-    <td align="center"> <p>-</p> </td>
-    <td align="center"> <p>-</p> </td>
+    <td align="center"> <p><a><a href="../assignments/assignment2.md#deadline-13th-march-2025-1700-hrs">2</a></p> </td>
+    <td align="center"> <p>08 Mar 2025</p> </td>
+    <td align="center"> <p>13 Mar 2025</p> </td>
+    <td align="center"> <p>5 Days</p> </td>
+    <td align="center"> <p id="timer_a2"></p> </td>
 </tr>
 
 <tr>

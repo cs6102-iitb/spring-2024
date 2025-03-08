@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Assignment 2 - CS6102 Spring 2024-25</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CS6102 Spring 2024-25</h1>
+
+                    <div class="right-buttons">
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <center>
+    <h1 id="assignment-2"><a class="header" href="#assignment-2">Assignment 2</a></h1>
+</center>
+<hr />
+<h2 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement</a></h2>
+<p>Perform Correlation Power Analysis (CPA) attack on AES implementation to recover the secret key.</p>
+<h2 id="description"><a class="header" href="#description">Description</a></h2>
+<p>The goal is to analyze power traces collected from an AES hardware implementation and use statistical techniques to deduce the encryption key.</p>
+<p>Download the trace assigned to your team from this link: <a href="https://iitbacin-my.sharepoint.com/:f:/g/personal/23m0815_iitb_ac_in/EtmktXQHLtVBmngzaOJQmIEBLj7-1JvfmUHx2CX2YmNaQA?e=PFHkq3">power_traces</a></p>
+<blockquote>
+<p><strong>IMPORTANT:</strong> Kindly read the document at this <a href="https://docs.google.com/document/d/1mSn4DSswocpQWICLW3UECwfau9wv4tnNMKFrlwPCODQ/edit?usp=sharing">link</a> to create a private repository for the assignment. Do not push everything at the last moment. Maintain a proper commit history.</p>
+</blockquote>
+<h2 id="deadline-13th-march-2025-1700-hrs"><a class="header" href="#deadline-13th-march-2025-1700-hrs">Deadline: 13th March 2025, 17:00 Hrs</a></h2>
+<hr />
+<h2 id="objective"><a class="header" href="#objective">Objective</a></h2>
+<ul>
+<li>Understand side-channel attacks, specifically CPA.</li>
+<li>Work with real-world power traces which is given to each team. Note-Each team is assigned with different power traces.</li>
+<li>Remove noise from the power traces. The original power trace has <code>5000</code> length and contains <code>250</code> points with random noise.</li>
+<li>Implement statistical correlation techniques to retrieve encryption key i.e. Implement a CPA attack to derive the encryption key from power traces.</li>
+</ul>
+<h2 id="provided-code"><a class="header" href="#provided-code">Provided Code</a></h2>
+<p>The provided <code>IPython Notebook</code> file (<code>.ipynb</code>) template sets up the environment for conducting a CPA attack. The template contains the following sections:</p>
+<ul>
+<li>
+<p>Reads a dataset containing</p>
+<ul>
+<li>Power traces (<code>trace_array</code>)</li>
+<li>Plaintext (<code>textin_array</code>)</li>
+<li>Ciphertext (<code>textout_array</code>)</li>
+<li>Key used for encryption (<code>key_array</code>)</li>
+</ul>
+</li>
+<li>
+<p>Defines AES substitution box (<code>sbox</code>) for byte substitution operation</p>
+</li>
+<li>
+<p>Prints trace_array shape, sample plaintext, actual key, and ciphertext for reference</p>
+<center>
+  <iframe
+    src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=7px&ph=7px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2523%2520put%2520the%2520path%2520of%2520the%2520downloaded%2520h5%2520file%2520which%2520was%2520assigned%2520to%2520your%2520team%250Afile%2520%253D%2520%2522path_to_file%252Fteam_name.h5%2522%250A%250A%2523------------------------------DO%2520NOT%2520EDIT%2520THE%2520BELOW%2520CODE----------------------------------%2523%250Aimport%2520h5py%250Aimport%2520numpy%2520as%2520np%250Awith%2520h5py.File%28file%252C%2520%2522r%2522%29%2520as%2520hf%253A%250A%2520%2520%2520%2520trace_array%2520%253D%2520np.array%28hf%255B%2522trace_array%2522%255D%29%250A%2520%2520%2520%2520textin_array%2520%253D%2520np.array%28hf%255B%2522textin_array%2522%255D%29%250A%2520%2520%2520%2520textout_array%2520%253D%2520np.array%28hf%255B%2522textout_array%2522%255D%29%250A%2520%2520%2520%2520key_array%2520%253D%2520np.array%28hf%255B%2522key_array%2522%255D%29%250A%250Asbox%2520%253D%2520%255B%250A%2520%2520%2520%2520%2523%25200%2520%2520%2520%25201%2520%2520%2520%25202%2520%2520%2520%25203%2520%2520%2520%25204%2520%2520%2520%25205%2520%2520%2520%25206%2520%2520%2520%25207%2520%2520%2520%25208%2520%2520%2520%25209%2520%2520%2520%2520a%2520%2520%2520%2520b%2520%2520%2520%2520c%2520%2520%2520%2520d%2520%2520%2520%2520e%2520%2520%2520%2520f%2520%250A%2520%2520%2520%25200x63%252C0x7c%252C0x77%252C0x7b%252C0xf2%252C0x6b%252C0x6f%252C0xc5%252C0x30%252C0x01%252C0x67%252C0x2b%252C0xfe%252C0xd7%252C0xab%252C0x76%252C%2520%2523%25200%250A%2520%2520%2520%25200xca%252C0x82%252C0xc9%252C0x7d%252C0xfa%252C0x59%252C0x47%252C0xf0%252C0xad%252C0xd4%252C0xa2%252C0xaf%252C0x9c%252C0xa4%252C0x72%252C0xc0%252C%2520%2523%25201%250A%2520%2520%2520%25200xb7%252C0xfd%252C0x93%252C0x26%252C0x36%252C0x3f%252C0xf7%252C0xcc%252C0x34%252C0xa5%252C0xe5%252C0xf1%252C0x71%252C0xd8%252C0x31%252C0x15%252C%2520%2523%25202%250A%2520%2520%2520%25200x04%252C0xc7%252C0x23%252C0xc3%252C0x18%252C0x96%252C0x05%252C0x9a%252C0x07%252C0x12%252C0x80%252C0xe2%252C0xeb%252C0x27%252C0xb2%252C0x75%252C%2520%2523%25203%250A%2520%2520%2520%25200x09%252C0x83%252C0x2c%252C0x1a%252C0x1b%252C0x6e%252C0x5a%252C0xa0%252C0x52%252C0x3b%252C0xd6%252C0xb3%252C0x29%252C0xe3%252C0x2f%252C0x84%252C%2520%2523%25204%250A%2520%2520%2520%25200x53%252C0xd1%252C0x00%252C0xed%252C0x20%252C0xfc%252C0xb1%252C0x5b%252C0x6a%252C0xcb%252C0xbe%252C0x39%252C0x4a%252C0x4c%252C0x58%252C0xcf%252C%2520%2523%25205%250A%2520%2520%2520%25200xd0%252C0xef%252C0xaa%252C0xfb%252C0x43%252C0x4d%252C0x33%252C0x85%252C0x45%252C0xf9%252C0x02%252C0x7f%252C0x50%252C0x3c%252C0x9f%252C0xa8%252C%2520%2523%25206%250A%2520%2520%2520%25200x51%252C0xa3%252C0x40%252C0x8f%252C0x92%252C0x9d%252C0x38%252C0xf5%252C0xbc%252C0xb6%252C0xda%252C0x21%252C0x10%252C0xff%252C0xf3%252C0xd2%252C%2520%2523%25207%250A%2520%2520%2520%25200xcd%252C0x0c%252C0x13%252C0xec%252C0x5f%252C0x97%252C0x44%252C0x17%252C0xc4%252C0xa7%252C0x7e%252C0x3d%252C0x64%252C0x5d%252C0x19%252C0x73%252C%2520%2523%25208%250A%2520%2520%2520%25200x60%252C0x81%252C0x4f%252C0xdc%252C0x22%252C0x2a%252C0x90%252C0x88%252C0x46%252C0xee%252C0xb8%252C0x14%252C0xde%252C0x5e%252C0x0b%252C0xdb%252C%2520%2523%25209%250A%2520%2520%2520%25200xe0%252C0x32%252C0x3a%252C0x0a%252C0x49%252C0x06%252C0x24%252C0x5c%252C0xc2%252C0xd3%252C0xac%252C0x62%252C0x91%252C0x95%252C0xe4%252C0x79%252C%2520%2523%2520a%250A%2520%2520%2520%25200xe7%252C0xc8%252C0x37%252C0x6d%252C0x8d%252C0xd5%252C0x4e%252C0xa9%252C0x6c%252C0x56%252C0xf4%252C0xea%252C0x65%252C0x7a%252C0xae%252C0x08%252C%2520%2523%2520b%250A%2520%2520%2520%25200xba%252C0x78%252C0x25%252C0x2e%252C0x1c%252C0xa6%252C0xb4%252C0xc6%252C0xe8%252C0xdd%252C0x74%252C0x1f%252C0x4b%252C0xbd%252C0x8b%252C0x8a%252C%2520%2523%2520c%250A%2520%2520%2520%25200x70%252C0x3e%252C0xb5%252C0x66%252C0x48%252C0x03%252C0xf6%252C0x0e%252C0x61%252C0x35%252C0x57%252C0xb9%252C0x86%252C0xc1%252C0x1d%252C0x9e%252C%2520%2523%2520d%250A%2520%2520%2520%25200xe1%252C0xf8%252C0x98%252C0x11%252C0x69%252C0xd9%252C0x8e%252C0x94%252C0x9b%252C0x1e%252C0x87%252C0xe9%252C0xce%252C0x55%252C0x28%252C0xdf%252C%2520%2523%2520e%250A%2520%2520%2520%25200x8c%252C0xa1%252C0x89%252C0x0d%252C0xbf%252C0xe6%252C0x42%252C0x68%252C0x41%252C0x99%252C0x2d%252C0x0f%252C0xb0%252C0x54%252C0xbb%252C0x16%2520%2520%2523%2520f%250A%255D%250Aprint%28trace_array.shape%29%250Aprint%28%27plaintext%253A%27%252Ctextin_array%255B0%255D%29%250Aprint%28%27actual%2520key%253A%27%252Ckey_array%255B0%255D%29%250Aprint%28%27ciphertext%253A%27%252Ctextout_array%255B0%255D%29%250A"
+    style="width: 813px; height: 714px; border:0; transform: scale(1); overflow:hidden;"
+    sandbox="allow-scripts allow-same-origin">
+  </iframe>
+</center>
+</li>
+</ul>
+<h2 id="expected-outcome"><a class="header" href="#expected-outcome">Expected Outcome</a></h2>
+<p>Upon successful implementation, the program should output a key guess that matches the actual encryption key. You should compare the derived key with the original key and analyze the correlation results.</p>
+<hr />
+<h2 id="evaluation-criteria"><a class="header" href="#evaluation-criteria">Evaluation Criteria</a></h2>
+<ul>
+<li>Correct implementation of statistical functions.</li>
+<li>Accuracy of the key guess.</li>
+<li>Understanding and explanation of the CPA technique.</li>
+<li>Correlation plots to analyze the given trace with and without the random noise.</li>
+<li>A README file explaining the techniques and results the team has achieved. The README should also contain plots and their respective inferences.</li>
+</ul>
+<h2 id="additional-notes"><a class="header" href="#additional-notes">Additional Notes</a></h2>
+<ul>
+<li>The assignment requires basic knowledge of AES encryption and Python programming.</li>
+<li>Ensure that all required dependencies (<code>numpy</code>, <code>h5py</code>) are installed.</li>
+<li>Submit a well-commented code explaining each step of the process.</li>
+</ul>
+<hr />
+<h2 id="submission"><a class="header" href="#submission">Submission</a></h2>
+<p>Create a directory named <code>&lt;team-name&gt;_a2</code> which contains the following files:</p>
+<ul>
+<li><code>assignment2.ipynb</code></li>
+<li><code>README.md</code></li>
+</ul>
+<p>Compress this directory into a <code>tar.gz</code> file using the command:</p>
+<pre><code class="language-sh">tar -czvf &lt;team-name&gt;_a2.tar.gz &lt;team-name&gt;_a2
+</code></pre>
+<p>Upload this <code>&lt;team-name&gt;_a2.tar.gz</code> on the Moodle at the <strong>respective link</strong>.</p>
+<blockquote>
+<p><strong>IMPORTANT:</strong> Apart from updating your team's private GitHub repository for this assignment, you also need to upload your submission on Moodle.</p>
+</blockquote>
+<hr />
+<br>
+<center>
+  Best Wishes! 😊
+</center>
+<br>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../assignments/assignment1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../assignments/assignment1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
