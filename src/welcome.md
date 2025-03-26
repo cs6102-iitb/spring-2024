@@ -99,6 +99,8 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 |   Feb 5, 7  |  Composite Field Mapping  |  -  |  [pdf](./downloadables/lec_slides/ISC_lec9_10.pdf) |  -  |
 | Feb 12, 19, 21 | Entering the world of attacks | - | [pdf](./downloadables/lec_slides/ISC_lec11_13.pdf) | - |
 | Mar 05, 07 | Entering the world of attacks (from page 72) | - | [pdf](./downloadables/lec_slides/ISC_lec11_15.pdf) | - |
+| Mar 12, 19 | Entering the world of attacks (from page 117) | - | [pdf](./downloadables/lec_slides/ISC_lec11_17.pdf) | - |
+| Mar 21, 26 | Side channel attack countermeasures | - | [pdf](./downloadables/lec_slides/ISC_lec18_19.pdf) | - |
 
 <!--
 
