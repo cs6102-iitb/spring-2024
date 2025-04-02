@@ -102,6 +102,7 @@ Checkout the <a href="https://sites.google.com/view/sayandeepsaha/courses/implem
 | Mar 12, 19 | Entering the world of attacks (from page 117) | - | [pdf](./downloadables/lec_slides/ISC_lec11_17.pdf) | - |
 | Mar 21, 26 | Side channel attack countermeasures | - | [pdf](./downloadables/lec_slides/ISC_lec18_19.pdf) | - |
 | Mar 28 | Fault Attacks | - | [pdf](./downloadables/lec_slides/ISC_lec20.pdf) | - |
+| Apr 2 | Fault Attacks (from page 35) | - | [pdf](./downloadables/lec_slides/ISC_lec21.pdf) | - |
 
 <!--
 
