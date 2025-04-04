@@ -34,7 +34,7 @@ The assignment focuses upon implementation of an attack on AES by leveraging fau
 
 > **IMPORTANT:** Kindly read the document at this [link](https://docs.google.com/document/d/1mSn4DSswocpQWICLW3UECwfau9wv4tnNMKFrlwPCODQ/edit?usp=sharing) to create a private repository for the assignment. Do not push everything at the last moment. Maintain a proper commit history.
 
-## Deadline: 08th April 2025, 23:59 Hrs
+## Deadline: 10th April 2025, 23:59 Hrs
 
 ---
 
