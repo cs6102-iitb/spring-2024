@@ -16,6 +16,7 @@
 ### Added
 
 - Assignments: Assignment 3 launched.
+- Welcome: Slides for lectures 22.
 
 ## 0.0.17 - 2025-04-02
 
