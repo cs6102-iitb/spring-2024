@@ -84,8 +84,8 @@ startCountdown('10 Apr, 2025 23:59:59', 'timer_a3');
 <tr>
     <td align="center"> <p><a><a href="../assignments/assignment3.md#deadline-10th-april-2025-2359-hrs">3</a></p> </td>
     <td align="center"> <p>04 Apr 2025</p> </td>
-    <td align="center"> <p>08 Apr 2025</p> </td>
-    <td align="center"> <p>5 Days</p> </td>
+    <td align="center"> <p>10 Apr 2025</p> </td>
+    <td align="center"> <p>7 Days</p> </td>
     <td align="center"> <p id="timer_a3"></p> </td>
 </tr>
 
