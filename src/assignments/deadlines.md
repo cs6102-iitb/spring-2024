@@ -41,6 +41,7 @@ function startCountdown (targetDate, elementId) {
 startCountdown('25 Jan, 2025 23:59:59', 'timer_a1_part1a');
 startCountdown('01 Feb, 2025 23:59:59', 'timer_a1_part1b');
 startCountdown('13 Mar, 2025 23:59:59', 'timer_a2');
+startCountdown('08 Apr, 2025 23:59:59', 'timer_a3');
 
 </script>
 
@@ -81,11 +82,11 @@ startCountdown('13 Mar, 2025 23:59:59', 'timer_a2');
 </tr>
 
 <tr>
-    <td align="center"> <p><a>3</a></p> </td>
-    <td align="center"> <p>-</p> </td>
-    <td align="center"> <p>-</p> </td>
-    <td align="center"> <p>-</p> </td>
-    <td align="center"> <p>-</p> </td>
+    <td align="center"> <p><a><a href="../assignments/assignment3.md#deadline-08th-april-2025-2359-hrs">3</a></p> </td>
+    <td align="center"> <p>04 Apr 2025</p> </td>
+    <td align="center"> <p>08 Apr 2025</p> </td>
+    <td align="center"> <p>5 Days</p> </td>
+    <td align="center"> <p id="timer_a3"></p> </td>
 </tr>
 
 </table>

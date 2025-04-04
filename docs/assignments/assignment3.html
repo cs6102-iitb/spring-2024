@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Assignments - CS6102 Spring 2024-25</title>
+        <title>Assignment 3 - CS6102 Spring 2024-25</title>
 
 
         <!-- Custom HTML head -->
@@ -154,95 +154,100 @@
                 <div id="content" class="content">
                     <main>
                         <center>
-    <h1 id="assignments"><a class="header" href="#assignments">Assignments</a></h1>
+    <h1 id="assignment-3"><a class="header" href="#assignment-3">Assignment 3</a></h1>
 </center>
 <hr />
-<script>
-function startCountdown (targetDate, elementId) {
-    // Set the date we're counting down to
-    let countDownDate = new Date(targetDate).getTime();
-
-    // Update the count down every minute
-    let x = setInterval(() => {
-
-        // Get today's date and time
-        let now = new Date().getTime();
-
-        // Find the difference between now and the count down date
-        let difference = countDownDate - now;
-
-        // If the count down is over, write some text
-        if (difference < 0) {
-            clearInterval(x);
-            document.getElementById(elementId).innerHTML = "-";
-        } else {
-            // Time calculations for days, hours, and minutes
-            let days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((difference % (1000 * 60)) / (1000));
-
-            // Output the result in the specified element
-            document.getElementById(elementId).innerHTML = days + "d " + hours + "h " + minutes + "m";
-            // document.getElementById(elementId).innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-        }
-
-    }, 1000);
-}
-
-startCountdown('25 Jan, 2025 23:59:59', 'timer_a1_part1a');
-startCountdown('01 Feb, 2025 23:59:59', 'timer_a1_part1b');
-startCountdown('13 Mar, 2025 23:59:59', 'timer_a2');
-startCountdown('08 Apr, 2025 23:59:59', 'timer_a3');
-
-</script>
+<h2 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement</a></h2>
+<p>Perform Statistical Fault attack on AES implementation to recover a byte of the last round key.</p>
+<h2 id="description"><a class="header" href="#description">Description</a></h2>
+<p>The assignment focuses upon implementation of an attack on AES by leveraging faulty ciphertexts to recover the encryption key.</p>
+<ul>
+<li>In this assignment, you will be given multiple faulty ciphertexts, the fault has been injected at the input of 10th round at the <code>0th</code> byte of the state.</li>
+<li>The fault is a single bit flip randomly happening at any of the bits in the <code>0th</code> byte i.e. in two faulty executions the index of the faulty bit can be different.</li>
+<li>You have to do a statistical fault attack to analyze the faulty ciphertexts and determine the <code>0th</code> byte of the AES last round key.</li>
+</ul>
+<p><strong>Note:</strong> You may need to find out your own distinguisher function and SEI metric defined in the class <strong>should not</strong> be used.</p>
+<h2 id="instructions"><a class="header" href="#instructions">Instructions</a></h2>
+<ul>
+<li>
+<p>Each team is assigned with their own faulty ciphertexts. You can download your faulty cipher texts by clicking the following link: <a href="https://iitbacin-my.sharepoint.com/:f:/g/personal/23m0815_iitb_ac_in/Eo4JFLu0ELVDghTf_Ot9G_gBPkmZIKwEg-ZwF4mY9YILxA?e=Z2lkGx">fault_ciphertexts</a></p>
+</li>
+<li>
+<p><strong>Input file:</strong>: The program takes a text file as an argument, where each line contains a faulty ciphertext, the last line contains the correct key byte which you can use to verify your output.</p>
+</li>
+<li>
+<p><strong>Output:</strong> Your code output should <strong>only</strong> print the correct byte of the AES last round key and no other text should be printed.</p>
+</li>
+<li>
+<p><strong>Note:</strong> The output should be in hexadecimal format, i.e. <code>0x00</code> to <code>0xFF</code>.</p>
+</li>
+<li>
+<p><strong>Example:</strong> If the correct key byte is <code>0x01</code>, your output should be:</p>
+<pre><code class="language-bash">   python assignment3.py &lt;input_file&gt;
+   0x01
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p><strong>IMPORTANT:</strong> Kindly read the document at this <a href="https://docs.google.com/document/d/1mSn4DSswocpQWICLW3UECwfau9wv4tnNMKFrlwPCODQ/edit?usp=sharing">link</a> to create a private repository for the assignment. Do not push everything at the last moment. Maintain a proper commit history.</p>
+</blockquote>
+<h2 id="deadline-08th-april-2025-2359-hrs"><a class="header" href="#deadline-08th-april-2025-2359-hrs">Deadline: 08th April 2025, 23:59 Hrs</a></h2>
+<hr />
+<h2 id="deliverables"><a class="header" href="#deliverables">Deliverables</a></h2>
+<ol>
+<li><strong>Code Execution Output:</strong> Run the script with provided faulty ciphertexts and submit the generated results.</li>
+<li><strong>Report:</strong> Submit a brief report including:
+<ul>
+<li>Explanation of how your distinguisher works.</li>
+<li>Observations regarding each of the methods you tried.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="evaluation-criteria"><a class="header" href="#evaluation-criteria">Evaluation Criteria</a></h2>
+<ul>
+<li>Correctness of implementation and execution.</li>
+<li>Clarity of explanations in the report.</li>
+<li>Github commits.</li>
+<li>Your code should work on our input files that are not available with you.</li>
+<li>A well documented report in the form of a README file.</li>
+</ul>
+<h2 id="additional-notes"><a class="header" href="#additional-notes">Additional Notes</a></h2>
+<ul>
+<li>The provided script assumes AES encryption knowledge and specifically focuses on analyzing the first byte of each faulty ciphertext.</li>
+<li>Feel free to modify and extend the script for further analysis.</li>
+</ul>
+<hr />
+<h2 id="submission"><a class="header" href="#submission">Submission</a></h2>
+<p>Create a directory named <code>&lt;team-name&gt;_a3</code> which contains the following files:</p>
+<ul>
+<li><code>assignment3.py</code></li>
+<li><code>README.md</code></li>
+</ul>
+<p>Compress this directory into a <code>tar.gz</code> file using the command:</p>
+<pre><code class="language-sh">tar -czvf &lt;team-name&gt;_a3.tar.gz &lt;team-name&gt;_a3
+</code></pre>
+<p>Upload this <code>&lt;team-name&gt;_a3.tar.gz</code> on the Moodle at the <strong>respective link</strong>.</p>
+<blockquote>
+<p><strong>IMPORTANT:</strong> Apart from updating your team's private GitHub repository for this assignment, you also need to upload your submission on Moodle.</p>
+</blockquote>
+<hr />
 <br>
-<table style="width:100%">
-<tr style="background-color: let(--quote-bg);">
-    <th align="center">#</th>
-    <th align="center">Start Date</th>
-    <th align="center">End Date</th>
-    <th align="center">Duration</th>
-    <th align="center">Time Remaining</th>
-</tr>
-<tr>
-    <td align="center"> <p><a href="../assignments/assignment1.html#part-a-deadline-jan-25-2025-1159-pm">1 (Part A)</a></p> </td>
-    <td align="center"> <p>18 Jan 2025</p> </td>
-    <td align="center"> <p>25 Jan 2025</p> </td>
-    <td align="center"> <p>6 Days</p> </td>
-    <td align="center"> <p id="timer_a1_part1a"></p> </td>
-</tr>
-<tr>
-    <td align="center"> <p><a href="../assignments/assignment1.html#part-b-deadline-feb-01-2025-1159-pm">1 (Part B)</a></p> </td>
-    <td align="center"> <p>18 Jan 2025</p> </td>
-    <td align="center"> <p>01 Feb 2025</p> </td>
-    <td align="center"> <p>13 Days</p> </td>
-    <td align="center"> <p id="timer_a1_part1b"></p> </td>
-</tr>
-<tr>
-    <td align="center"> <p><a><a href="../assignments/assignment2.html#deadline-13th-march-2025-1700-hrs">2</a></p> </td>
-    <td align="center"> <p>08 Mar 2025</p> </td>
-    <td align="center"> <p>13 Mar 2025</p> </td>
-    <td align="center"> <p>5 Days</p> </td>
-    <td align="center"> <p id="timer_a2"></p> </td>
-</tr>
-<tr>
-    <td align="center"> <p><a><a href="../assignments/assignment3.html#deadline-08th-april-2025-2359-hrs">3</a></p> </td>
-    <td align="center"> <p>04 Apr 2025</p> </td>
-    <td align="center"> <p>08 Apr 2025</p> </td>
-    <td align="center"> <p>5 Days</p> </td>
-    <td align="center"> <p id="timer_a3"></p> </td>
-</tr>
-</table>
+<center>
+  Best Wishes! 😊
+</center>
+<br>
+<hr />
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../installation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../assignments/assignment2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../assignments/assignment1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -252,11 +257,11 @@ startCountdown('08 Apr, 2025 23:59:59', 'timer_a3');
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../installation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../assignments/assignment2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../assignments/assignment1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

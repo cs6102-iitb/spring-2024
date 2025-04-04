@@ -11,6 +11,12 @@
 
 ---
 
+## 0.0.18 - 2025-04-04
+
+### Added
+
+- Assignments: Assignment 3 launched.
+
 ## 0.0.17 - 2025-04-02
 
 ### Added

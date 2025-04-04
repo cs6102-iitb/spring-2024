@@ -11,6 +11,7 @@
 - [Assignments](./assignments/deadlines.md)
     - [Assignment 1](./assignments/assignment1.md)
     - [Assignment 2](./assignments/assignment2.md)
+    - [Assignment 3](./assignments/assignment3.md)
 
 ---
 
